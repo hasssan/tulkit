@@ -8,6 +8,10 @@
 	function onDecode() {
 		result = decodeURIComponent(source);
 	}
+
+	function onSwap() {
+		[result, source] = [source, result];
+	}
 </script>
 
 <div class="">
@@ -22,6 +26,9 @@
 	>
 	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onDecode}
 		>Decode</button
+	>
+	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onSwap}
+		>Swap</button
 	>
 	<textarea
 		class="my-3 p-2 w-full h-40 block resize-y shadow-slate-900 border border-slate-200 rounded"
