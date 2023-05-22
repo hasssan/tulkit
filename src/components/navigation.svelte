@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	const navItems = [
-		{ name: 'URI', url: '/uri' },
-		{ name: 'String', url: '/string' },
-		{ name: 'Date', url: '/date' }
+		{ name: 'URI', url: `${base}/uri` },
+		{ name: 'String', url: `${base}/string` },
+		{ name: 'Date', url: `${base}/date` }
 	];
 </script>
 
