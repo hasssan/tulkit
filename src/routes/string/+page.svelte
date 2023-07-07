@@ -1,4 +1,6 @@
 <script lang="ts">
+	import CopyButton from '../../components/copy-button.svelte';
+
 	let source = '';
 	let result = '';
 
@@ -40,4 +42,5 @@
 		placeholder="Result"
 		bind:value={result}
 	/>
+	<CopyButton text={result} />
 </div>
