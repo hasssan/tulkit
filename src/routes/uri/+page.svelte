@@ -1,4 +1,6 @@
 <script lang="ts">
+	import CopyButton from '../../components/copy-button.svelte';
+
 	let source = '';
 	let result = '';
 
@@ -27,12 +29,12 @@
 	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onDecode}
 		>Decode</button
 	>
-	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onSwap}
-		>Swap</button
+	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onSwap}>Swap</button
 	>
 	<textarea
 		class="my-3 p-2 w-full h-40 block resize-y shadow-slate-900 border border-slate-200 rounded"
 		placeholder="Result"
 		bind:value={result}
 	/>
+	<CopyButton text={result} />
 </div>
