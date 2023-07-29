@@ -16,6 +16,22 @@
 	function onRemovePunctuation() {
 		result = source.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
 	}
+
+	function onSlugify() {
+		result = source
+			.replace(/[^\w\s]|_/g, '')
+			.replace(/\s+/g, '-')
+			.trim()
+			.toLowerCase();
+	}
+
+	/**
+	 * Slugify the source and remove numbers.
+	 */
+	function onRemoveNumber() {
+		onSlugify();
+		result = result.replace(/[0-9]/g, '');
+	}
 </script>
 
 <div class="">
@@ -37,6 +53,12 @@
 	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onRemovePunctuation}
 		>Remove Punctuation</button
 	>
+	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onSlugify}
+		>Slugify</button
+	>
+	<button class="m-1 p-2 border rounded-md bg-emerald-500 text-white" on:click={onRemoveNumber}
+		>Remove numbers and Slugify
+	</button>
 	<textarea
 		class="my-3 p-2 w-full h-40 block resize-y shadow-slate-900 border border-slate-200 rounded"
 		placeholder="Result"
