@@ -14,7 +14,7 @@
 		result = source.toLowerCase().replace(/(?:^|\s)\S/g, (a) => a.toUpperCase());
 	}
 	function onRemovePunctuation() {
-		result = source.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
+		result = source.replace(/[^\w\s\n]|_/g, '');
 	}
 
 	function onSlugify() {
@@ -56,6 +56,7 @@
 				>
 					Source
 				</label><textarea
+					data-testid="inputData"
 					id="inputData"
 					class="h-40 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-400 leading-tight focus:outline-none focus:shadow-outline mb-4"
 					placeholder="Enter your data here..."
@@ -66,6 +67,7 @@
 						<button
 							class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[rgb(16,185,129)] hover:bg-[rgb(5,150,105)] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 							on:click={item.action}
+							data-testid={item.name}
 						>
 							{item.name}</button
 						>
@@ -77,6 +79,7 @@
 				>
 					Result
 				</label><textarea
+					data-testid="outputData"
 					id="outputData"
 					class="h-40 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
 					placeholder="Your result will appear here..."
