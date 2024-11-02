@@ -6,7 +6,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Noto Sans', ...defaultTheme.fontFamily.sans]
+				sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
+				mono: ['Recursive', ...defaultTheme.fontFamily.mono]
+			},
+			colors: {
+				tTeal: '#00A19D',
+				tYellow: '#FFF8E5',
+				tOrange: '#FFB344',
+				tRed: '#E05D5D'
 			}
 		}
 	},
