@@ -22,15 +22,15 @@
 	];
 </script>
 
-<main class="flex-1 py-12 bg-white dark:bg-gray-800">
-	<div class="container px-6 mx-auto grid gap-8 grid-cols-2">
+<main class="flex-1 pt-20">
+	<div class="container mx-auto grid gap-8 grid-cols-2">
 		{#each navItems as item}
-			<a class="flex flex-col items-center p-6 border-2 border-tTeal" href={item.url}>
+			<a class="flex flex-col items-center p-6 border-2 border-tTeal-base" href={item.url}>
 				<svelte:component this={item.icon} />
-				<h3 class="text-xl font-bold text-tTeal font-mono">
+				<h3 class="text-xl font-bold text-tTeal-base font-mono">
 					{item.name}
 				</h3>
-				<p class="text-gray-500 dark:text-gray-400">{item.desc}</p>
+				<p class="text-gray-500">{item.desc}</p>
 			</a>
 		{/each}
 	</div>
