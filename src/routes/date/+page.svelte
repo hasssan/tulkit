@@ -25,9 +25,7 @@
 <main class="flex-1 py-12 bg-white dark:bg-gray-800">
 	<div class="container px-6 mx-auto grid grid-cols-2 gap-8">
 		<div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md dark:bg-gray-900">
-			<h2 class="text-2xl font-bold text-[rgb(16,185,129)] dark:text-[rgb(16,185,129)] mb-4">
-				Date Time to ISOString
-			</h2>
+			<h2 class="text-2xl font-bold text-tTeal-base mb-4">Date Time to ISOString</h2>
 			<form class="w-full">
 				<label
 					class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2"
@@ -63,9 +61,7 @@
 			</form>
 		</div>
 		<div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md dark:bg-gray-900">
-			<h2 class="text-2xl font-bold text-[rgb(16,185,129)] dark:text-[rgb(16,185,129)] mb-4">
-				ISOString to Local Date Time
-			</h2>
+			<h2 class="text-2xl font-bold text-tTeal-base mb-4">ISOString to Local Date Time</h2>
 			<form class="w-full">
 				<label
 					class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2"

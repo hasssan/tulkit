@@ -46,9 +46,7 @@
 <main class="flex-1 py-12 bg-white dark:bg-gray-800">
 	<div class="container px-6 mx-auto grid gap-8">
 		<div class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md dark:bg-gray-900">
-			<h2 class="text-2xl font-bold text-[rgb(16,185,129)] dark:text-[rgb(16,185,129)] mb-4">
-				String Tuls
-			</h2>
+			<h2 class="text-2xl font-bold text-tTeal-base mb-4">String Tuls</h2>
 			<form class="w-full">
 				<label
 					class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2"
@@ -65,7 +63,7 @@
 				<div class="flex justify-start mb-4">
 					{#each actionsItems as item}
 						<button
-							class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[rgb(16,185,129)] hover:bg-[rgb(5,150,105)] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-tTeal-base hover:bg-tTeal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 							on:click={item.action}
 							data-testid={item.name}
 						>
