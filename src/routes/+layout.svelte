@@ -6,7 +6,7 @@
 
 <div class="container mx-auto my-4">
 	<header class="h-20 flex items-center justify-between bg-white dark:bg-gray-900">
-		<h1 class="text-3xl font-mono font-bold text-tTeal">
+		<h1 class="text-5xl font-mono font-bold text-tTeal">
 			<a href="{base}/">Tulkit</a>
 		</h1>
 		<!-- <form class="relative w-64">
@@ -30,7 +30,7 @@
 				type="search"
 			/>
 		</form> -->
+		<NavigationComponent />
 	</header>
-	<!-- <NavigationComponent /> -->
 	<slot />
 </div>

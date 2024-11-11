@@ -8,11 +8,11 @@
 </script>
 
 <nav class="">
-	<div class="flex space-x-4">
+	<div class="flex justify-between min-w-52">
 		{#each navItems as item}
 			<a
 				href={item.url}
-				class="text-emerald-700 underline hover:text-emerald-500 py-2 rounded-md text-sm font-medium"
+				class="text-tTeal hover:underline py-2 rounded-md text-base font-bold"
 				aria-current="page">{item.name}</a
 			>
 		{/each}
