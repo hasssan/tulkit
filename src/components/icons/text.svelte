@@ -8,7 +8,7 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	class="h-16 w-16 mb-4 text-tTeal"
+	class="h-16 w-16 mb-4 text-tTeal-base"
 >
 	<path d="M17 6.1H3"></path>
 	<path d="M21 12.1H3"></path>
