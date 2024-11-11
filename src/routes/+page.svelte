@@ -23,14 +23,11 @@
 </script>
 
 <main class="flex-1 py-12 bg-white dark:bg-gray-800">
-	<div class="container px-6 mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+	<div class="container px-6 mx-auto grid gap-8 grid-cols-2">
 		{#each navItems as item}
-			<a
-				class="flex flex-col items-center p-6 bg-white rounded-lg shadow-md dark:bg-gray-900"
-				href={item.url}
-			>
+			<a class="flex flex-col items-center p-6 border-2 border-tTeal" href={item.url}>
 				<svelte:component this={item.icon} />
-				<h3 class="text-xl font-bold text-[rgb(16,185,129)] dark:text-[rgb(16,185,129)]">
+				<h3 class="text-xl font-bold text-tTeal font-mono">
 					{item.name}
 				</h3>
 				<p class="text-gray-500 dark:text-gray-400">{item.desc}</p>

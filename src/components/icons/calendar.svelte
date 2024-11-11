@@ -8,7 +8,7 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	class="h-16 w-16 mb-4 text-[rgb(16,185,129)] dark:text-[rgb(16,185,129)]"
+	class="h-16 w-16 mb-4 text-tTeal"
 >
 	<rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
 	<line x1="16" x2="16" y1="2" y2="6"></line>
