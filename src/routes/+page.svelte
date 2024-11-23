@@ -26,7 +26,7 @@
 	<div class="container mx-auto grid gap-8 grid-cols-2">
 		{#each navItems as item}
 			<a class="flex flex-col items-center p-6 border-2 border-tTeal-base" href={item.url}>
-				<svelte:component this={item.icon} />
+				<item.icon />
 				<h3 class="text-xl font-bold text-tTeal-base font-mono">
 					{item.name}
 				</h3>

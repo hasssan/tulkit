@@ -2,17 +2,12 @@
 	import CopyButton from '../../components/copy-button.svelte';
 	import dayjs from 'dayjs';
 
-	let sourceISO = '';
-	let resultISO = '';
-	let copyButtonStyle = 'm-0 p-1 border rounded-md bg-emerald-500 text-white';
+	let sourceISO = $state('');
+	let resultISO = $state('');
 
-	$: resultISO = sourceISO ? dayjs(sourceISO).format('YYYY-MM-DD HH:mm:ss') : '';
-
-	let dateSource = '';
-	let timeSource = '';
-	let dateResult = '';
-
-	$: dateSource, timeSource, processDateResult();
+	let dateSource = $state('');
+	let timeSource = $state('');
+	let dateResult = $state('');
 
 	function processDateResult() {
 		if (!dateSource && timeSource) {
@@ -20,6 +15,13 @@
 		}
 		dateResult = dateSource || timeSource ? dayjs(`${dateSource} ${timeSource}`).toISOString() : '';
 	}
+
+	$effect(() => {
+		resultISO = sourceISO ? dayjs(sourceISO).format('YYYY-MM-DD HH:mm:ss') : '';
+		if (dateSource || timeSource) {
+			processDateResult();
+		}
+	});
 </script>
 
 <main class="flex-1 py-12 bg-white dark:bg-gray-800">

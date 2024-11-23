@@ -1,8 +1,8 @@
 <script lang="ts">
 	import CopyButton from '../../components/copy-button.svelte';
 
-	let source = '';
-	let result = '';
+	let source = $state('');
+	let result = $state('');
 
 	function onEncode() {
 		result = encodeURIComponent(source);
@@ -35,17 +35,17 @@
 				<div class="flex justify-start mb-4">
 					<button
 						class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-tTeal-base hover:bg-tTeal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-						on:click={onEncode}
+						onclick={onEncode}
 					>
 						Encode</button
 					><button
 						class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-tTeal-base hover:bg-tTeal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-						on:click={onDecode}
+						onclick={onDecode}
 					>
 						Decode</button
 					><button
 						class="m-1 inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-tTeal-base hover:bg-tTeal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-						on:click={onSwap}
+						onclick={onSwap}
 					>
 						Swap
 					</button>

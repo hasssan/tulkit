@@ -1,7 +1,12 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import NavigationComponent from '../components/navigation.svelte';
 	import { base } from '$app/paths';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="container mx-auto my-4">
@@ -32,5 +37,5 @@
 		</form> -->
 		<NavigationComponent />
 	</header>
-	<slot />
+	{@render children?.()}
 </div>
