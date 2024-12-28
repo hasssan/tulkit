@@ -4,9 +4,15 @@
 	import LinkIcon from '../components/icons/link.svelte';
 	import TextIcon from '../components/icons/text.svelte';
 	import CalendarIcon from '../components/icons/calendar.svelte';
+	import StatementIcon from '../components/icons/statement.svelte';
 
 	const navItems = [
-		{ name: 'URI', url: `${base}/uri`, desc: 'URI Decode and Encode', icon: LinkIcon },
+		{
+			name: 'URI',
+			url: `${base}/uri`,
+			desc: 'URI Decode and Encode',
+			icon: LinkIcon
+		},
 		{
 			name: 'String',
 			url: `${base}/string`,
@@ -18,6 +24,12 @@
 			url: `${base}/date`,
 			desc: 'Date to ISOString and Localtime',
 			icon: CalendarIcon
+		},
+		{
+			name: 'Bank Statement',
+			url: `${base}/bank-statement`,
+			desc: 'Bank Statement Parser',
+			icon: StatementIcon
 		}
 	];
 </script>
