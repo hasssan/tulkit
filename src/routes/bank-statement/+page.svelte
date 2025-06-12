@@ -98,16 +98,16 @@
 <main class="flex-1 py-12">
 	<div class="container px-6 mx-auto grid gap-8 mb-7">
 		<div class="flex flex-col items-center p-6">
-			<h2 class="text-2xl font-bold font-mono text-tTeal-base">Bank Statement Tuls</h2>
+			<h2 class="text-2xl font-bold font-mono text-t-teal-base">Bank Statement Tuls</h2>
 		</div>
 	</div>
 	<div class="container px-6 mx-auto grid gap-8 mb-7">
 		<div class="flex flex-col items-center p-6">
-			<div class="mb-6 flex justify-between items-center text-tTeal-base font-mono">
+			<div class="mb-6 flex justify-between items-center text-t-teal-base font-mono">
 				<label for="document-type" class="w-32">Type</label>
 				<select
 					bind:value={selectedType}
-					class="w-72 border border-tTeal-base px-1 py-2.5 focus:ring-tTeal-base focus:ring-1 focus-visible:outline-tTeal-base focus-visible:outline"
+					class="w-72 border border-t-teal-base px-1 py-2.5 focus:ring-t-teal-base focus:ring-1 focus-visible:outline-t-teal-base focus-visible:outline-solid"
 				>
 					<option value="">Select Document Type</option>
 					{#each Object.entries(docTypes) as [key, value]}
@@ -115,17 +115,17 @@
 					{/each}
 				</select>
 			</div>
-			<div class="mb-6 flex justify-between items-center text-tTeal-base font-mono">
+			<div class="mb-6 flex justify-between items-center text-t-teal-base font-mono">
 				<label for="password" class="w-32">Password</label>
 				<input
 					id="password"
 					type="password"
 					placeholder="Enter your password"
-					class="w-72 border border-tTeal-base p-2 focus:ring-tTeal-base focus:ring-1 focus-visible:outline-tTeal-base focus-visible:outline"
+					class="w-72 border border-t-teal-base p-2 focus:ring-t-teal-base focus:ring-1 focus-visible:outline-t-teal-base focus-visible:outline-solid"
 					bind:value={password}
 				/>
 			</div>
-			<div class="mb-6 flex justify-between items-center text-tTeal-base font-mono">
+			<div class="mb-6 flex justify-between items-center text-t-teal-base font-mono">
 				<label for="file-upload" class="w-32">File</label>
 				<input
 					id="file-upload"
@@ -134,21 +134,21 @@
 					required
 					type="file"
 					accept=""
-					class="w-72 file:border-[1px] file:border-tTeal-500 file:bg-tTeal-base file:text-white hover:file:bg-tTeal-500 px-2 py-2 border border-tTeal-base text-sm focus:ring-1 focus:ring-offset-0 focus:ring-tTeal-base cursor-pointer hover:file:cursor-pointer focus-visible:outline-tTeal-base focus-visible:outline"
+					class="w-72 file:border file:border-t-teal-500 file:bg-t-teal-base file:text-white file:px-1 hover:file:bg-t-teal-500 px-2 py-2 border border-t-teal-base text-sm focus:ring-1 focus:ring-offset-0 focus:ring-t-teal-base cursor-pointer hover:file:cursor-pointer focus-visible:outline-t-teal-base focus-visible:outline-solid"
 					onchange={handleUpload}
 				/>
 			</div>
-			<div class="mb-6 text-tTeal-base font-mono">
+			<div class="mb-6 text-t-teal-base font-mono">
 				<input
 					id="submit"
 					type="button"
 					value="Submit"
 					onclick={onSubmit}
-					class="font-mono border border-tTeal-base py-1 px-3 hover:bg-tTeal-base hover:text-white cursor-pointer focus:ring-tTeal-base focus:ring-1 focus:rounded-none focus-visible:outline-tTeal-base focus-visible:outline"
+					class="font-mono border border-t-teal-base py-1 px-3 hover:bg-t-teal-base hover:text-white cursor-pointer focus:ring-t-teal-base focus:ring-1 focus:rounded-none focus-visible:outline-t-teal-base focus-visible:outline-solid"
 				/>
 			</div>
 			{#if errorMessage}
-				<div class="mb-6 text-tRed-700 font-mono">
+				<div class="mb-6 text-t-red-700 font-mono">
 					{errorMessage}
 				</div>
 			{/if}
@@ -157,8 +157,8 @@
 	{#if statement?.transactions.length !== 0}
 		<div class="container px-6 mx-auto grid gap-8 mb-7">
 			<div class="flex flex-col items-center">
-				<h3 class="font-mono font-bold text-tTeal-base text-xl mb-6">
-					Statement:<span class="text-tOrange-600 pl-2">
+				<h3 class="font-mono font-bold text-t-teal-base text-xl mb-6">
+					Statement:<span class="text-t-orange-600 pl-2">
 						{fileInfo.originalName}
 					</span>
 				</h3>
@@ -193,10 +193,10 @@
 						type="button"
 						value="Download CSV"
 						onclick={onDownload}
-						class="font-mono text-white bg-tTeal-base py-1 px-3 hover:bg-tTeal-700 cursor-pointer focus:ring-tTeal-700 focus:ring-1 focus:rounded-none focus-visible:outline-tTeal-700 focus-visible:outline"
+						class="font-mono text-white bg-t-teal-base py-1 px-3 hover:bg-t-teal-700 cursor-pointer focus:ring-t-teal-700 focus:ring-1 focus:rounded-none focus-visible:outline-t-teal-700 focus-visible:outline-solid"
 					/>
 					<CopyButton
-						class="font-mono text-white bg-tTeal-base py-1 px-3 hover:bg-tTeal-700 cursor-pointer focus:ring-tTeal-700 focus:ring-1 focus:rounded-none focus-visible:outline-tTeal-700 focus-visible:outline"
+						class="font-mono text-white bg-t-teal-base py-1 px-3 hover:bg-t-teal-700 cursor-pointer focus:ring-t-teal-700 focus:ring-1 focus:rounded-none focus-visible:outline-t-teal-700 focus-visible:outline-solid"
 						text={csvContent}
 					/>
 				</div>
@@ -206,12 +206,13 @@
 </main>
 
 <style lang="postcss">
+	@reference "../../app.css";
 	th {
-		@apply text-tTeal-base pb-2;
+		@apply text-t-teal-base pb-2;
 	}
 	tfoot {
 		td {
-			@apply text-tTeal-base pt-4;
+			@apply text-t-teal-base pt-4;
 		}
 	}
 	th,

@@ -1,3 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    Noto Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    Recursive, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --color-t-teal-50: #effefc;
+  --color-t-teal-100: #c7fff8;
+  --color-t-teal-200: #90fff0;
+  --color-t-teal-300: #51f7e8;
+  --color-t-teal-400: #1de4d8;
+  --color-t-teal-500: #04c8bf;
+  --color-t-teal-700: #05807e;
+  --color-t-teal-800: #0a6565;
+  --color-t-teal-900: #0d5454;
+  --color-t-teal-950: #003133;
+  --color-t-teal-base: #00a19d;
+
+  --color-t-yellow-100: #feefc7;
+  --color-t-yellow-200: #fdde8a;
+  --color-t-yellow-300: #fcc74d;
+  --color-t-yellow-400: #fbb024;
+  --color-t-yellow-500: #f58e0b;
+  --color-t-yellow-600: #d96806;
+  --color-t-yellow-700: #b44709;
+  --color-t-yellow-800: #92370e;
+  --color-t-yellow-900: #782e0f;
+  --color-t-yellow-950: #451503;
+  --color-t-yellow-base: #fff8e5;
+
+  --color-t-orange-50: #fff8eb;
+  --color-t-orange-100: #ffeac6;
+  --color-t-orange-200: #ffd388;
+  --color-t-orange-400: #ff9b20;
+  --color-t-orange-500: #f97507;
+  --color-t-orange-600: #dd5102;
+  --color-t-orange-700: #b73506;
+  --color-t-orange-800: #94280c;
+  --color-t-orange-900: #7a220d;
+  --color-t-orange-950: #460e02;
+  --color-t-orange-base: #ffb344;
+
+  --color-t-red-50: #fdf3f3;
+  --color-t-red-100: #fbe5e5;
+  --color-t-red-200: #f9cfcf;
+  --color-t-red-300: #f4adad;
+  --color-t-red-400: #eb7e7e;
+  --color-t-red-600: #ca3838;
+  --color-t-red-700: #aa2b2b;
+  --color-t-red-800: #8d2727;
+  --color-t-red-900: #752727;
+  --color-t-red-950: #3f1010;
+  --color-t-red-base: #e05d5d;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

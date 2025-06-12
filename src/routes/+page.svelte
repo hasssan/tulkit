@@ -37,9 +37,9 @@
 <main class="flex-1 pt-20">
 	<div class="container mx-auto grid gap-8 grid-cols-2">
 		{#each navItems as item}
-			<a class="flex flex-col items-center p-6 border-2 border-tTeal-base" href={item.url}>
+			<a class="flex flex-col items-center p-6 border-2 border-t-teal-base" href={item.url}>
 				<item.icon />
-				<h3 class="text-xl font-bold text-tTeal-base font-mono">
+				<h3 class="text-xl font-bold text-t-teal-base font-mono">
 					{item.name}
 				</h3>
 				<p class="text-gray-500">{item.desc}</p>

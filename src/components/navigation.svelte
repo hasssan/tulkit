@@ -12,7 +12,7 @@
 		{#each navItems as item}
 			<a
 				href={item.url}
-				class="text-tTeal-base hover:underline py-2 rounded-md text-base font-mono font-bold"
+				class="text-t-teal-base hover:underline py-2 rounded-md text-base font-mono font-bold"
 				aria-current="page">{item.name}</a
 			>
 		{/each}

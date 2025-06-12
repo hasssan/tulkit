@@ -11,7 +11,7 @@
 
 <div class="container mx-auto my-4">
 	<header class="h-20 flex items-center justify-between bg-white dark:bg-gray-900">
-		<h1 class="text-5xl font-mono font-bold text-tTeal-base">
+		<h1 class="text-5xl font-mono font-bold text-t-teal-base">
 			<a href="{base}/">Tulkit</a>
 		</h1>
 		<!-- <form class="relative w-64">
@@ -30,7 +30,7 @@
 				<circle cx="11" cy="11" r="8"></circle>
 				<path d="m21 21-4.3-4.3"></path></svg
 			><input
-				class="flex h-10 rounded-md border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full bg-white shadow-none appearance-none pl-8 dark:bg-gray-950"
+				class="flex h-10 rounded-md border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full bg-white shadow-none appearance-none pl-8 dark:bg-gray-950"
 				placeholder="Search tulkit..."
 				type="search"
 			/>
