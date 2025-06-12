@@ -63,10 +63,6 @@
 			errorMessage = 'Please select a document type';
 			return;
 		}
-		if (!password) {
-			errorMessage = 'Please enter your password';
-			return;
-		}
 		if (!fileContent || fileContent.byteLength === 0) {
 			errorMessage = 'Please upload a file';
 			return;
