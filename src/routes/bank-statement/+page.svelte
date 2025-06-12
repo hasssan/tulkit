@@ -2,6 +2,7 @@
 	import Papa from 'papaparse';
 	import { parseStatement } from './parser';
 	import type { DocType, Statement } from './parser';
+	import CopyButton from '../../components/copy-button.svelte';
 
 	let selectedType = $state('');
 	let files = $state() as FileList;
@@ -11,6 +12,7 @@
 	let fileContent: ArrayBuffer;
 	let statement: Statement = $state({ transactions: [], total: 0 });
 	let fileInfo = $state({ name: '', originalName: '' });
+	let csvContent: string = $state('');
 
 	const docTypes = {
 		MANDIRI_CC: 'Mandiri CC Statement',
@@ -34,14 +36,17 @@
 		reader.readAsArrayBuffer(file);
 	}
 
-	function onDownload() {
-		const downloadContent = statement.transactions.map((item) => ({
+	function setCSVContent() {
+		const content = statement.transactions.map((item) => ({
 			Date: item.date,
 			Name: item.note,
 			Amount: item.transaction
 		}));
-		const csv = Papa.unparse(downloadContent);
-		const blob = new Blob([csv], { type: 'text/csv' });
+		csvContent = Papa.unparse(content);
+	}
+
+	function onDownload() {
+		const blob = new Blob([csvContent], { type: 'text/csv' });
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
 		a.href = url;
@@ -74,6 +79,7 @@
 			const parsed = await parseStatement(docType, fileContent, password);
 			if (parsed) {
 				statement = parsed;
+				setCSVContent();
 			}
 
 			if (inputEl) {
@@ -160,7 +166,7 @@
 						{fileInfo.originalName}
 					</span>
 				</h3>
-				<table class="table-auto text-left whitespace-no-wrap font-mono">
+				<table class="table-auto text-left whitespace-no-wrap font-mono w-10/12">
 					<thead>
 						<tr>
 							<th>Date</th>
@@ -185,13 +191,17 @@
 						</tr>
 					</tfoot>
 				</table>
-				<div class="mt-6">
+				<div class="mt-6 flex justify-between items-center w-10/12">
 					<input
 						id="download"
 						type="button"
 						value="Download CSV"
 						onclick={onDownload}
 						class="font-mono text-white bg-tTeal-base py-1 px-3 hover:bg-tTeal-700 cursor-pointer focus:ring-tTeal-700 focus:ring-1 focus:rounded-none focus-visible:outline-tTeal-700 focus-visible:outline"
+					/>
+					<CopyButton
+						class="font-mono text-white bg-tTeal-base py-1 px-3 hover:bg-tTeal-700 cursor-pointer focus:ring-tTeal-700 focus:ring-1 focus:rounded-none focus-visible:outline-tTeal-700 focus-visible:outline"
+						text={csvContent}
 					/>
 				</div>
 			</div>
