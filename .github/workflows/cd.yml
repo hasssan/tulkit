@@ -1,19 +1,18 @@
 name: Deploy
 
-on: 
+on:
   push:
-      branches: [ main ]
+    branches: [main]
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build with Node.js 20
+      - name: Build with Node.js 22
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
       - run: npm ci
       - run: npm run build
