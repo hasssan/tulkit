@@ -42,7 +42,7 @@
 			Name: item.note,
 			Amount: item.transaction
 		}));
-		csvContent = Papa.unparse(content);
+		csvContent = Papa.unparse(content, { delimiter: '\t' });
 	}
 
 	function onDownload() {
